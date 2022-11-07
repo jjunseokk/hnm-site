@@ -34,11 +34,10 @@ function App() {
   console.log("asdasdasd", authenticate);
   return (
     <div>
-      <Navbar />
+      <Navbar authenticate={authenticate} setAuthenticate={setAuthenticate}/>
       <Routes >
         <Route path='/' element={<ProductAll />} />
         <Route path='/login' element={<Login setAuthenticate={setAuthenticate}/>}/>
-        <Route path='/navbar' element={<Navbar setAuthenticate={setAuthenticate} />}/>
         <Route path='/product/:id' element={<PrivateRoute authenticate={authenticate}/>} />
       </Routes>
     </div>
