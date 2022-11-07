@@ -44,9 +44,9 @@ const ProductDetail = () => {
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-              <Dropdown.Item href="#/action-1" onClick={()=>showDrop("S")}>S</Dropdown.Item>
-              <Dropdown.Item href="#/action-2" onClick={()=>showDrop("M")}>M</Dropdown.Item>
-              <Dropdown.Item href="#/action-3" onClick={()=>showDrop("L")}>L</Dropdown.Item>
+              <Dropdown.Item  onClick={()=>showDrop("S")}>S</Dropdown.Item>
+              <Dropdown.Item  onClick={()=>showDrop("M")}>M</Dropdown.Item>
+              <Dropdown.Item  onClick={()=>showDrop("L")}>L</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
           <button className='product-button'>추가</button>
