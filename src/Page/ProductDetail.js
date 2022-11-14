@@ -2,20 +2,19 @@ import React, { useEffect, useState } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import { useParams } from 'react-router-dom'
 import Dropdown from 'react-bootstrap/Dropdown';
+import { useDispatch, useSelector } from 'react-redux';
+import { productAction } from '../redux/actions/productAction';
 
 const ProductDetail = () => {
 
   let { id } = useParams()
-  const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(false);
+  const product = useSelector((state)=> state.product.selectedItem);
+  const dispatch = useDispatch();
   const getProductDetail = async () => {
     setLoading(true);
-    let url = `https://my-json-server.typicode.com/jjunseokk/hnm-site/products/${id}`
-    let respanse = await fetch(url)
-    let data = await respanse.json();
+    dispatch(productAction.getProductDetail(id));
     setLoading(false);
-    console.log(data);
-    setProduct(data);
   };
   const [dropbox, setDropbox] = useState("");
   let size = document.getElementById("dropdown-basic");

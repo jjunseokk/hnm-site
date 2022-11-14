@@ -20,4 +20,4 @@ const showDetail = () =>{
   )
 }
 
-export default ProductCard
+export default ProductCard;

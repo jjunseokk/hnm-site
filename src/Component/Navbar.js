@@ -29,8 +29,6 @@ const Navbar = ({authenticate, setAuthenticate}) => {
     navigate('/');
   }
 
-  console.log(authenticate);
-
   return (
     <div>
       <div>
